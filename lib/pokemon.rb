@@ -33,7 +33,7 @@ class Pokemon
     object[:id] = array[0][0]
     object[:name] = array[0][1]
     object[:type] = array[0][2]
-    object
+    Pokemon.new(object)
     binding.pry
   end
 
