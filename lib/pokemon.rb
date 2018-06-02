@@ -27,17 +27,17 @@ class Pokemon
   def self.find(id, db)
     #@@all.detect { |element| element = db.execute("SELECT * FROM pokemon where id = #{id}") }
     #newobject = Pokemon.new
-    binding.pry
+    #binding.pry
     hash = {}
     array = db.execute("SELECT * FROM pokemon where id = #{id}")
-    binding.pry
+    #binding.pry
     hash[:id] = array[0][0]
     hash[:name] = array[0][1]
     hash[:type] = array[0][2]
     hash[:hp] = array[0][3]
     newobject = Pokemon.new(hash)
     newobject
-    binding.pry
+    #binding.pry
     #binding.pry
   end
 
