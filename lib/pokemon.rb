@@ -30,6 +30,7 @@ class Pokemon
     binding.pry
     hash = {}
     array = db.execute("SELECT * FROM pokemon where id = #{id}")
+    binding.pry
     hash[:id] = array[0][0]
     hash[:name] = array[0][1]
     hash[:type] = array[0][2]
