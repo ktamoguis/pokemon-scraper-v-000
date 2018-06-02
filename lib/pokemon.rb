@@ -28,13 +28,14 @@ class Pokemon
     #@@all.detect { |element| element = db.execute("SELECT * FROM pokemon where id = #{id}") }
     #newobject = Pokemon.new
     array = []
-    object = {}
+    hash = {}
     array = db.execute("SELECT * FROM pokemon where id = #{id}")
-    object[:id] = array[0][0]
-    object[:name] = array[0][1]
-    object[:type] = array[0][2]
-    object[:hp] = array[0][3]
-    Pokemon.new(object)
+    hash[:id] = array[0][0]
+    hash[:name] = array[0][1]
+    hash[:type] = array[0][2]
+    hash[:hp] = array[0][3]
+    newobject = Pokemon.new(hash)
+    newobject
     binding.pry
   end
 
