@@ -27,6 +27,7 @@ class Pokemon
   def self.find(id, db)
     #@@all.detect { |element| element = db.execute("SELECT * FROM pokemon where id = #{id}") }
     #newobject = Pokemon.new
+    binding.pry
     hash = {}
     array = db.execute("SELECT * FROM pokemon where id = #{id}")
     hash[:id] = array[0][0]
