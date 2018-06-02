@@ -11,7 +11,7 @@ class Pokemon
     @name = hash[:name]
     @type = hash[:type]
     if !hash[:hp].nil?
-      @hp = hp
+      @hp = hash[:hp]
     end
     @@all << self
   end
