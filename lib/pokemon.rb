@@ -30,7 +30,6 @@ class Pokemon
     array = []
     object = {}
     array[0] = db.execute("SELECT * FROM pokemon where id = #{id}")
-    b
     binding.pry
   end
 
