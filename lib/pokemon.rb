@@ -30,7 +30,7 @@ class Pokemon
     array = []
     object_hash = {}
     array[0] = db.execute("SELECT * FROM pokemon where id = #{id}")
-    #binding.pry
+    binding.pry
   end
 
   def alter_hp(hp, db)
