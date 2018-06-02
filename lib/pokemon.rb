@@ -28,8 +28,9 @@ class Pokemon
     #@@all.detect { |element| element = db.execute("SELECT * FROM pokemon where id = #{id}") }
     #newobject = Pokemon.new
     array = []
-    object_hash = {}
+    object= {}
     array[0] = db.execute("SELECT * FROM pokemon where id = #{id}")
+    b
     binding.pry
   end
 
