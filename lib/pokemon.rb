@@ -29,7 +29,10 @@ class Pokemon
     #newobject = Pokemon.new
     array = []
     object = {}
-    array[0] = db.execute("SELECT * FROM pokemon where id = #{id}")
+    array = db.execute("SELECT * FROM pokemon where id = #{id}")
+    object[:id] = array[0][0][0]
+    object[:name] = array[0][0][1] 
+    object[:type] = array[0][0][2]
     binding.pry
   end
 
