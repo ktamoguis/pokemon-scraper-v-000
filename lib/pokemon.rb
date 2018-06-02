@@ -35,7 +35,7 @@ class Pokemon
     hash[:hp] = array[0][3]
     newobject = Pokemon.new(hash)
     newobject
-    binding.pry
+    #binding.pry
   end
 
   def alter_hp(hp, db)
